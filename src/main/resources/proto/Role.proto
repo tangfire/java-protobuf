@@ -1,0 +1,20 @@
+// 使用 proto3 语法
+syntax = "proto3";
+
+// 包名
+package com.fire.protobuf.proto;
+
+//生成 proto 文件所在包路径，一般来说是和文件包名一致就可以
+option java_package = "com.fire.protobuf.proto";
+
+//生成 proto 的文件名
+option java_outer_classname="RoleProto";
+
+// 角色对象定义
+message Role {
+  // 角色代码
+  string code = 1;
+
+  // 角色名称
+  string name = 2;
+}
